@@ -1,0 +1,57 @@
+@import "import/on-off-b";
+@import "import/hacks";
+@import "import/vars";
+@import "import/mixins";
+
+#cont-1{
+  .bg(#79c3d2);
+  .c(#FFF);
+}
+
+#header{
+  .mar(20px);
+  .text-a(@lef);
+  h1 {
+    .mar(0px);
+    font-size: 2.5em;
+  }
+}
+
+#menu{
+  .text-a(@cen);
+  .bg(@bg-p);
+  ul{
+    .pad(20px);
+    .mar(0px);
+    li{
+      display: inline;
+      a{
+        .link-d;
+        .pad(10px);
+        .c(@menu-t-color);
+      }
+    }
+  }
+}
+
+#conteudo{
+  &:extend(.text-p);
+  &:extend(.cont-m);
+}
+
+#barra-lateral{
+  &:extend(.text-p);
+  &:extend(.cont-m);
+  .text-a(@cen);
+  .titulo-sb{
+    @media (@max-w @boo-xs){
+      .text-p;
+      .c(@title-sd);
+      .bg(@bg-p);
+    }
+  }
+}
+
+.test-text{
+  .text-d(@lin-t);
+}

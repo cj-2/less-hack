@@ -1,0 +1,43 @@
+// Textos e parágrafos.
+.text-p{
+  padding: @pad-t-padrao;
+}
+.text-ex-p(@pad-text){
+  padding: @pad-text;
+}
+.cont-p{
+  padding: @pad-c-padrao;
+}
+.cont-ex-p(@pad-cont){
+  padding: @pad-cont;
+}
+.text-m{
+  margin: @mar-t-padrao;
+}
+.text-ex-m(@mar-text){
+  margin: @mar-text;
+}
+.cont-m{
+  margin: @mar-c-padrao;
+}
+.cont-ex-m(@mar-cont){
+  margin: @mar-cont;
+}
+
+// Links.
+.link-r{
+  text-decoration: none;
+  color: @link-color;
+}
+.link-d{
+  .link-r;
+  transition: all .25s ease;
+  &:hover, &:focus{
+    .link-r;
+    color: @link-hover;
+  }
+  &:focus{
+    .link-r;
+    color: darken(@link-hover, 30%);
+  }
+}
